@@ -1,0 +1,52 @@
+{
+  "name": "sismos-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
+    "axios": "^1.16.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.16.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-force-graph-2d": "^1.29.1",
+    "react-force-graph-3d": "^1.29.1",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.15.1",
+    "three": "^0.184.0",
+    "three-spritetext": "^1.10.0",
+    "vis-data": "^8.0.4",
+    "vis-network": "^10.1.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.5.0",
+    "jsdom": "^27.2.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0",
+    "vite": "^7.2.0",
+    "vitest": "^4.0.7"
+  }
+}
