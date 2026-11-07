@@ -7,7 +7,7 @@
 -- Versión del servidor: 9.1.0
 -- Versión de PHP: 8.3.14
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO"; SET FOREIGN_KEY_CHECKS = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -93,14 +93,14 @@ CREATE TABLE IF NOT EXISTS `usuario_roles` (
   CONSTRAINT FK_usuario_id FOREIGN KEY (usuario_id) REFERENCES usuarios (id) ON DELETE CASCADE,
   CONSTRAINT FK_rol_id FOREIGN KEY (rol_id) REFERENCES roles (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-COMMIT;
+SET FOREIGN_KEY_CHECKS = 1; COMMIT;
 
 -- Insertar roles básicos
 INSERT INTO roles (nombre) VALUES ('ROLE_USER'), ('ROLE_ADMIN') ON DUPLICATE KEY UPDATE nombre=nombre;
 
 INSERT INTO usuarios (nombre, email, password) 
-VALUES ('Admin', 'prueba@example.com', '$2a$10$JQkTQkv1YkVd5fMWpfgUreSzCcnqGEnQUanTu9PZxxlRgoiY6UOvG') 
-ON DUPLICATE KEY UPDATE nombre=nombre;
+VALUES ('Admin', 'prueba@example.com', '$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG') 
+ON DUPLICATE KEY UPDATE password=VALUES(password);
 
 -- Asignar rol al usuario de Admin
 INSERT INTO usuario_roles (usuario_id, rol_id) 

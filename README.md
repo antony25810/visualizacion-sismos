@@ -84,7 +84,7 @@ npm run start
   - Gestión de Usuarios (Admin): `/admin/gestion-usuarios`
 
 ## Usuarios Predeterminados
-El sistema se inicializa con roles de usuario. Puedes registrar nuevos usuarios desde la página de registro.
+El sistema se inicializa con un usuario administrador predeterminado (`Usuario: Admin` / `Contraseña: password`). También puedes registrar nuevos usuarios desde la página de registro.
 
 ## Pruebas
 Comandos recomendados:
